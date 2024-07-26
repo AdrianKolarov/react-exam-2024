@@ -1,0 +1,96 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    
+   
+}
+
+li {
+    color: white;
+    list-style: none;
+    margin-left: 20px;
+}
+
+
+
+.mythic-runs {
+    width: 700px;
+    background-color: rgb(60, 190, 147);
+    border-radius: 8px;
+}
+
+.blacklist {
+    width: 700px;
+    background-color: rgb(60, 190, 147);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.blacklist li {
+    font-size: 22px;
+    line-height: 1.4;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+.blacklist input {
+    
+    width: 75%;
+    height: 100%;
+    font-size: 25px;
+    background-color:transparent;
+    border:0;
+}
+.blacklist ul {
+    margin-top: 20px;
+}
+
+.search-bar {
+    display: inline-block;
+    border: 2px solid black;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    width: 70%;
+    
+}
+
+.search-bar button {
+    width: 80px;
+    background-color:transparent;
+    height: 100%;
+    font-size: 5px;
+    margin-bottom: 5px;
+    font-size: 25px;
+    border: 0px;
+    margin-left: 5px;
+    
+         
+}
+.blacklist ul button {
+    background-color: black;
+    height:auto;
+    border:0;
+    width: 100px;
+    margin-bottom: 8px;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 9px;
+    font-size: 18px;
+    
+}
+
+.listOfNames {
+    border-top: 3px solid white;
+    padding-top: 20px;
+}

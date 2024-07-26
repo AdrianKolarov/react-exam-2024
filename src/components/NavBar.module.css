@@ -1,0 +1,28 @@
+.navigation {
+    background-color: rgb(60, 190, 147);
+    height: 80px;
+    width: 100%;
+  }
+  nav {
+    display: flex;
+    float: right;
+   
+  }
+  .navigation img {
+    height: 60px;
+    width: 80px;
+    float: left;
+    margin-top: 6px;
+    margin-left: 6px;
+  }
+  
+  a{
+    margin-right:30px;
+    margin-top: 25px;
+    font-size: large;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: white;
+  
+  }

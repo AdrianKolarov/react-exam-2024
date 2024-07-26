@@ -1,0 +1,97 @@
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 200px;
+   
+    
+
+}
+
+#register {
+    background-color: rgb(60, 190, 147);
+    border: 0px;
+    margin-right: 400px;
+    height: 80px;
+    width: 400px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+    
+}
+
+#login {
+    background-color: rgb(60, 190, 147);
+    border: 0px;
+    margin-left: 400px;
+    height: 80px;
+    width: 400px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#import {
+    background-color: rgb(60, 190, 147);
+    border: 0px;
+    justify-content: center;
+    border-radius: 10px;
+    height: 80px;
+    width: 600px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+    display: flex;
+    margin: auto;
+    
+}
+
+.shame h1 {
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 60px;
+
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+
+}
+
+.shame {
+    border: 2px solid;
+    border-radius: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgb(60, 190, 147);
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.para {
+    text-align: center;
+    margin-top: 110px;
+    margin-right: 100px;
+    margin-left: 100px;
+    text-decoration: none;
+}
+

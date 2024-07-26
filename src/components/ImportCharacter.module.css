@@ -1,0 +1,50 @@
+.char-form {
+  height: 700px;
+  width: 660px;
+  display: flex;
+  flex-direction: column;
+  border: 5px solid rgb(60, 190, 147);
+  border-radius: 10px;
+  margin: 110px auto 110px auto;
+  
+}
+
+.char-form h2 {
+  text-align: center;
+  padding-top:60px;
+  padding-bottom: 10px;
+  font-family: sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+  margin-bottom: 60px;
+}
+
+.char-form input,
+.char-form select {
+  display: block;
+    width: 70%;
+    margin-bottom: 30px;
+    margin-left: 100px;
+    border: 2px solid rgb(60, 190, 147);
+    border-radius: 5px;
+    background-color: grey;
+    height: 60px;
+    font-size: 22px;
+  }
+
+  .char-form button {
+    width: 70%;
+    height: 60px;
+    margin-left:100px;
+    background-color: rgb(60, 190, 147);
+    border-radius: 5px;
+    border: 0px;
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+
+  
