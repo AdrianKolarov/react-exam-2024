@@ -54,6 +54,9 @@
     padding-top: 20px;
     display: flex;
     margin: auto;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    
     
 }
 
@@ -63,6 +66,7 @@
     text-align: center;
     margin-top: 50px;
     font-size: 60px;
+    text-decoration: underline;
 
 }
 

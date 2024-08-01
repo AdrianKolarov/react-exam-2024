@@ -1,14 +1,30 @@
 
 import styles from './Login.module.css';
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase/config';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../store/usersSlice';
+import { useNavigate } from 'react-router-dom';
 
 
 
 export default function Login(){
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
   const [userCredentials, setUserCredentials] = useState({})
   const [error, setError] = useState('')
+
+  onAuthStateChanged(auth, (user)=>{
+    if(user) {
+      
+      dispatch(setUser({id: user.uid, email: user.email}))
+      navigate('/')
+     
+    } else {
+      dispatch(setUser(null))
+    }
+  })
 
   function handleCredentials(e){
     setUserCredentials({...userCredentials, [e.target.name]: e.target.value})
@@ -20,8 +36,8 @@ export default function Login(){
     e.preventDefault()
     signInWithEmailAndPassword(auth, userCredentials.email, userCredentials.password)
     .then((userCredential) => {
-    // Signed in 
-    console.log(userCredential.user);
+    dispatch(setUser({id: userCredential.user.uid, email: userCredential.user.email}))
+    navigate('/')
     // ...
     })
     .catch((error) => {

@@ -2,11 +2,26 @@
 import styles from './Register.module.css';
 import { useState } from 'react';
 import { auth } from '../firebase/config';
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import { useDispatch } from 'react-redux';
+import { setUser } from '../store/usersSlice';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Register(){
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
   const [userCredentials, setUserCredentials] = useState({})
   const [error, setError] = useState('')
+
+  onAuthStateChanged(auth, (user)=>{
+    if(user) {
+      dispatch(setUser({id: user.uid, email: user.email}))
+      navigate('/')
+    } else {
+      dispatch(setUser(null))
+    }
+  })
 
 
   function handleCredentials(e){
@@ -26,6 +41,8 @@ export default function Register(){
         
         const user = userCredential.user;
         console.log(user)
+        dispatch(setUser({id: userCredential.user.uid, email: userCredential.user.email}))
+        navigate('/')
         
         })
         .catch((error) => {

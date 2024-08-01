@@ -38,6 +38,10 @@ p {
     width: 190px;
 }
 
+.card img.imgClass {
+    margin-top: 50px;
+  }
+
 .card button {
     height: 25px;
     width: 100px;
