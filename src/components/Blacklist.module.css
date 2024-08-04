@@ -1,0 +1,91 @@
+.blacklist {
+    width: 700px;
+    background-color: rgb(60, 190, 147);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.blacklist li {
+    font-size: 22px;
+    line-height: 1.4;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    position: relative;
+}
+
+
+.blacklist li:hover .note{
+    display: block;
+}
+
+.blacklist input {
+    
+    width: 75%;
+    height: 100%;
+    font-size: 25px;
+    background-color:transparent;
+    border:0;
+}
+.blacklist ul {
+    margin-top: 20px;
+}
+
+
+.blacklist ul button {
+    background-color: black;
+    height:auto;
+    border:0;
+    width: 100px;
+    margin-bottom: 8px;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 9px;
+    font-size: 18px;
+    
+}
+
+.listOfNames {
+    list-style-type: none;
+    padding: 0;
+}
+
+.note {
+    display: none; 
+    position: absolute;
+    top: -25px;
+    left: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    color: black;
+    padding: 5px;
+    border-radius: 3px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.searchBar {
+    display: inline-block;
+    border: 2px solid black;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    width: 70%;
+    
+}
+
+.searchBar button {
+    width: 80px;
+    background-color:transparent;
+    height: 100%;
+    font-size: 5px;
+    margin-bottom: 5px;
+    font-size: 25px;
+    border: 0px;
+    margin-left: 5px;
+    
+         
+}

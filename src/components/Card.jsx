@@ -1,5 +1,5 @@
 import styles from './Card.module.css';
-
+import PropTypes from "prop-types";
 
 
 export default function Card({character = {}, showBlacklist, onDelete, onSelect, onDetails}){
@@ -22,8 +22,8 @@ export default function Card({character = {}, showBlacklist, onDelete, onSelect,
           <h2>Server: {character.server}</h2>
           {showBlacklist && (
               <div className={styles["card-bottom-part"]}>
-                  <p>Number of blacklists: {character.blacklists}</p>
-                  <button className={styles.blacklist} onClick={() => onDelete(character.id)}>Delete</button>
+                  <p>Number of blacklists: {character.count}</p>
+                  
               </div>
           )}
           {!showBlacklist && (
@@ -32,9 +32,22 @@ export default function Card({character = {}, showBlacklist, onDelete, onSelect,
                   <button className={styles.delete} onClick={() => onDelete(character.id)}>Delete</button>
               </div>
           )}
-          <button className={styles.details} onClick={onDetails}>Details</button>
+          {!showBlacklist &&(<button className={styles.details} onClick={onDetails}>Details</button>)}
       </div>
   );
        
     
 }
+
+Card.propTypes = {
+    character: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        server: PropTypes.string.isRequired,
+        region: PropTypes.string.isRequired,
+       
+    }).isRequired,
+    showBlacklist: PropTypes.func.isRequired,
+    onDelete: PropTypes.func.isRequired,
+    onSelect: PropTypes.func.isRequired,
+    onDetails: PropTypes.func.isRequired,
+};

@@ -13,6 +13,7 @@ export default function Characters(){
   const characters = useSelector((state) => state.characters.items);
 useEffect(()=>{
     dispatch(fetchCharacters())
+    console.log('render')
 }, [dispatch])
   const handleDelete = (id) => {
     dispatch(deleteCharacter(id))
@@ -20,6 +21,7 @@ useEffect(()=>{
 
   const handleSelect = (character)=>{
     dispatch(selectCharacter(character))
+    navigate('/mylist')
   }
 
   const handleDetails = (character) => {

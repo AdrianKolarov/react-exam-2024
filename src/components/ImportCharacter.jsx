@@ -24,7 +24,10 @@ export default function ImportCharacter(){
       const data = await response.json();
       return data.thumbnail_url;
     }
-
+    const capitalizeFirstLetter = (str) => {
+      if(!str) return str;
+      return str.charAt(0).toUpperCase()+str.slice(1).toLowerCase()
+    }
     const handleSubmit = async (e) =>{
       e.preventDefault()
       setError('')
@@ -35,12 +38,14 @@ export default function ImportCharacter(){
       }
       try{
       const thumbnailUrl = await fetchThumbnailUrl(name, region, server);
-      dispatch(addCharacter({ name, region, server, thumbnail: thumbnailUrl }))
+      const capitalizedName = capitalizeFirstLetter(name)
+      const capitalizedServer = capitalizeFirstLetter(server)
+      dispatch(addCharacter({ name: capitalizedName, region, server: capitalizedServer, thumbnail: thumbnailUrl }))
       
       setName('')
       setServer('')
       setRegion('eu')
-      navigate('/characters')
+      navigate('/')
     } catch(error){
       setError("Character doesn't exist")
     }
@@ -59,6 +64,7 @@ export default function ImportCharacter(){
           placeholder="Character Name"
           value={name}
           onChange={(e)=>setName(e.target.value)}
+          maxLength={12}
         />
         
         <select id="region" name="region" value={region} onChange={(e)=> setRegion(e.target.value)}>
@@ -73,6 +79,7 @@ export default function ImportCharacter(){
             placeholder="Server"
             value={server}
             onChange={(e)=> setServer(e.target.value)}
+            maxLength={20}
             /> 
              {
               error &&  <div className={styles.error}>
