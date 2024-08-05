@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { removeFromUserBlacklist } from "../store/userBlacklistSlice";
+import { removeFromGlobalBlacklist } from "../store/globalBlacklistSlice";
 import Search from "./Search";
 import styles from "./Blacklist.module.css";
 import PropTypes from "prop-types";
@@ -21,6 +22,10 @@ export default function Blacklist({ userBlacklist, handleEditNote }) {
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
+  const handleRemove = (player) => {
+    dispatch(removeFromUserBlacklist(player.id))
+    dispatch(removeFromGlobalBlacklist(player.name))
+  }
 
   const filteredBlacklist = userBlacklist.filter((player) => {
     const searchTerm = searchQuery.toLowerCase();
@@ -53,12 +58,12 @@ export default function Blacklist({ userBlacklist, handleEditNote }) {
               )}
               <div>
                 <button onClick={() => handleEditNote(player.id)}>Edit</button>
-                <button onClick={() => dispatch(removeFromUserBlacklist(player.id))}>Remove</button>
+                <button onClick={() => handleRemove(player)}>Remove</button>
               </div>
             </li>
           ))
         ) : (
-          <p>No result</p>
+          <p className={styles.empty}>Nothing to see here!</p>
         )}
       </ul>
     </div>

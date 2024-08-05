@@ -5,7 +5,8 @@ import { auth } from '../firebase/config';
 import { createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { setUser } from '../store/usersSlice';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+
 
 
 export default function Register(){
@@ -87,7 +88,7 @@ export default function Register(){
             }
            
             <button onClick={(e)=>{handleSignUp(e)}} type="submit">Register</button>
-            <p className={styles.message}>Already registered? <a href="#">Login</a></p>
+            <p className={styles.message}>Already registered? <Link to="/login">Login</Link></p>
           </form>
         </div>
     </>

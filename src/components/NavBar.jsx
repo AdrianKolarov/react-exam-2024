@@ -32,7 +32,7 @@ export default function NavBar(){
 
     return <>
     <div className={styles.navigation}>
-    <Link to="/"> <img src="./public/mythicplus2.png"/></Link>
+    <Link to="/"> <img src="/mythicplus2.png"/></Link>
     <nav>
     {user.currentUser ?
     <>

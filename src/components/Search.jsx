@@ -12,7 +12,7 @@ export default function Search({ searchQuery, onSearchChange }){
             value={searchQuery}
             onChange={onSearchChange}
             />
-            <button>Search</button>
+            
         </div>
     </>
 }

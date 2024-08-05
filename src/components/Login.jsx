@@ -5,7 +5,7 @@ import { auth } from '../firebase/config';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../store/usersSlice';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 
 
@@ -72,7 +72,7 @@ export default function Login(){
             }
         <button onClick={(e)=>{handleLogin(e)}} type="submit" id="submit">Login</button>
         <p className={styles.message}>
-          Not registered? <a href="#">Create an account</a>
+          Not registered? <Link to="/register">Register</Link>
         </p>
       </form>
     </div>

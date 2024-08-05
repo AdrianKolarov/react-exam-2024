@@ -45,6 +45,7 @@ export default function ImportCharacter(){
       setName('')
       setServer('')
       setRegion('eu')
+      
       navigate('/')
     } catch(error){
       setError("Character doesn't exist")

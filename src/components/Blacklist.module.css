@@ -89,3 +89,9 @@
     
          
 }
+
+.empty {
+    text-align: center;
+    text-decoration: none;
+    font-size: 32px;
+}
