@@ -29,7 +29,7 @@ export default function Login(){
   function handleCredentials(e){
     setUserCredentials({...userCredentials, [e.target.name]: e.target.value})
     setError("")
-    console.log(userCredentials)
+   
   }
   
   function handleLogin(e){

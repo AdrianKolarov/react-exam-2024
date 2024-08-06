@@ -31,7 +31,7 @@ export default function ImportCharacter(){
     const handleSubmit = async (e) =>{
       e.preventDefault()
       setError('')
-      console.log('click')
+      
       if(!name || !server){
         alert("Character name and server are required!")
         return
@@ -45,7 +45,6 @@ export default function ImportCharacter(){
       setName('')
       setServer('')
       setRegion('eu')
-      
       navigate('/')
     } catch(error){
       setError("Character doesn't exist")

@@ -23,7 +23,7 @@ export default function NavBar(){
             
 
         }).catch((error) => {
-            console.log(error)
+            console.error(error)
         })
     }
     }

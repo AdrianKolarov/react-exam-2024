@@ -13,7 +13,7 @@ export default function Characters(){
   const characters = useSelector((state) => state.characters.items);
 useEffect(()=>{
     dispatch(fetchCharacters())
-    console.log('render')
+    
 }, [dispatch])
   const handleDelete = (id) => {
     dispatch(deleteCharacter(id))

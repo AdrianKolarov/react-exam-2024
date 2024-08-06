@@ -28,7 +28,7 @@ export default function Register(){
   function handleCredentials(e){
     setUserCredentials({...userCredentials, [e.target.name]: e.target.value})
     setError(error.message)
-    console.log(userCredentials)
+    
   }
 
   function handleSignUp(e){
@@ -40,8 +40,8 @@ export default function Register(){
       createUserWithEmailAndPassword(auth, userCredentials.email, userCredentials.password)
       .then((userCredential) => {
         
-        const user = userCredential.user;
-        console.log(user)
+        
+       
         dispatch(setUser({id: userCredential.user.uid, email: userCredential.user.email}))
         navigate('/')
         

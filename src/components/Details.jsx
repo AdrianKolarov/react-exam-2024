@@ -10,7 +10,7 @@ export default function Details(){
     const { character } = location.state || {}
     const [details, setDetails] = useState(null)
     const navigate = useNavigate()
-    console.log("Details component rendered", { character });
+    
 
     useEffect(()=>{
         if(character){
