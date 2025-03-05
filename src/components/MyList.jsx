@@ -17,7 +17,7 @@ export default function MyList() {
   
   async function getPlayers(id) {
     const proxyUrl = 'https://corsproxy.io/?';
-    const apiUrl = `https://raider.io/api/v1/mythic-plus/run-details?season=season-df-4&id=${id}`;
+    const apiUrl = `https://raider.io/api/v1/mythic-plus/run-details?season=season-tww-2&id=${id}`;
     const response = await fetch(proxyUrl + encodeURIComponent(apiUrl));
     return await response.json();
   }
